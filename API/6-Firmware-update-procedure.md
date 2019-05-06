@@ -1,11 +1,11 @@
 # Firmware update procedure
  
 The whole firmware update procedure may be divided into two steps:
-1. Erase current existing user firmware by calling [<code>clearCOS()</code>](./4Functions.md#clearCOS)
+1. Erase current existing user firmware by calling [<code>clearCOS()</code>](./4-Functions.md#clearCOS)
    
-2. Make sure user firmware of connected **WOOKONG Solo** device had been erased successfully, then call [<code>updateCOS(cosData, callback)</code>](./4Functions.md#updatecoscosdata-callback)
+2. Make sure user firmware of connected **WOOKONG Solo** device had been erased successfully, then call [<code>updateCOS(cosData, callback)</code>](./4-Functions.md#updatecoscosdata-callback)
 
-Notice: [<code>clearCOS()</code>](./4Functions.md#clearCOS) and [<code>updateCOS(cosData, callback)</code>](./4Functions.md#updatecoscosdata-callback) may result device communication fail on some version of OS, e.g: macOS High Sierra (10.13), so when you got a code that is not equal to [<code>DEV_COMMAND_INVALID</code>](./3core.constants.md#coreconstantsrets) returned by getDeviceInfo(), you should try to disconnect and reconnect **WOOKONG Solo**.
+Notice: [<code>clearCOS()</code>](./4-Functions.md#clearCOS) and [<code>updateCOS(cosData, callback)</code>](./4-Functions.md#updatecoscosdata-callback) may result device communication fail on some version of OS, e.g: macOS High Sierra (10.13), so when you got a code that is not equal to [<code>DEV_COMMAND_INVALID</code>](./3-core.constants.md#coreconstantsrets) returned by getDeviceInfo(), you should try to disconnect and reconnect **WOOKONG Solo**.
 
 
 **Example**  

@@ -4,7 +4,7 @@
 
 
 
-In tutorial 2, we will get a ETH address from connected **WOOKONG Solo**, according to [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md), use `[0, 2147483692, 2147483708, 2147483648, 0, 0]` (indicates `[0, 0x8000002c, 0x8000003c, 0x80000000, 0x00000000]` in decimal) as the derive path for ETH is strongly recommended in the whole tutorials.
+In this section, we will get a ETH address from connected **WOOKONG Solo**, according to [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md), use `[0,2147483692,2147483708,2147483648,0,0]` (indicates `[0,0x8000002c,0x8000003c,0x80000000,0x00000000]` in decimal) as the derive path for ETH is strongly recommended in the whole tutorials.
 
 1. Add the following function to the end of `index.js`, we need to show address on device screen, so the last parameter of `getAddress(coinType, derivePath, showOnScreen)` should be **1** according to the [API document](../API/api.md#getaddresscointype-derivepath-showonscreen).
    
@@ -91,4 +91,4 @@ In tutorial 2, we will get a ETH address from connected **WOOKONG Solo**, accord
         }
     }
     ```
-9.  `addr` command is implemented, you should transfer some ETH to the address you've just got for the next tutorials.
+9.  `addr` command is implemented, you should transfer some ETH to the address you've just got for the next section.

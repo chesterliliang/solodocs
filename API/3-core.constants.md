@@ -2,6 +2,19 @@
 
 core.constants is collection of constants may be used in fuctions as parameters or return
 
+- [core.constants](#coreconstants)
+  - [core.constants.rets](#coreconstantsrets)
+  - [core.constants.coins](#coreconstantscoins)
+  - [core.constants.lengths](#coreconstantslengths)
+  - [core.constants.devinfo](#coreconstantsdevinfo)
+    - [PIN status definition](#pin-status-definition)
+    - [Chain type definition](#chain-type-definition)
+    - [Firmware version length definition](#firmware-version-length-definition)
+    - [Firmware type definition](#firmware-type-definition)
+    - [Lifecycle definition](#lifecycle-definition)
+    - [LCD status definition](#lcd-status-definition)
+    - [Others definition](#others-definition)
+
 ## core.constants.rets
 | Name | Value | Description |
 | --- | --- | --- |

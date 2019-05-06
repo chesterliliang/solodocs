@@ -29,14 +29,14 @@ MAC: GO->Utilities->System Infomation->USB
 1. make sure you have the proper version of [Node](https://nodejs.org/en/download/) installed.
 
 
-2. Create a project, if none exists, and change your directory to this project's root.
+2. Create a project, if none exists, and change your current working directory to this project's root.
 
 
 3. Run the **wookong-solo-lib** installation command:
    
-`npm install https://github.com/extropiescom/wookong-solo-lib.git –save`
+`npm install https://github.com/extropiescom/wookong-solo-lib.git –-save`
 
 1. After installation finished, you can use api provided by **wookong-solo-lib** in your project.
 
 ## Follow the Tutorial
-If you are new to hardware wallet, we strongly suggest to follow our tutorial "Build you wallet" to know how does WOOKONG Solo work step by steo. 
+If you are new to hardware wallet, we strongly recommend you to follow our tutorial "Build your own ETH wallet" to know how does WOOKONG Solo work step by step. 

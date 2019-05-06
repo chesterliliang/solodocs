@@ -2,9 +2,7 @@
 
 ## `info` command
 
-**Intergrate **wookong-solo-lib** into current project and get device info of connected **WOOKONG Solo****
-
-In tutorial 1, we will intergrate **wookong-solo-lib** into the project, and try to get device info from connected **WOOKONG Solo**.
+In this section, we will intergrate **wookong-solo-lib** into the project, and try to get device info from connected **WOOKONG Solo**.
 
 
 1. type `npm install https://github.com/extropiescom/wookong-solo-lib --save` in command line and run it.
@@ -14,7 +12,7 @@ In tutorial 1, we will intergrate **wookong-solo-lib** into the project, and try
     ```js
     const core = require('wookong-solo-lib');
     ```
-3. Now we can use all functions provided by **wookong-solo-lib**, let's try to get device info, edit the `info` branch inside the `switch` statement in `index.js`:
+3. Now we can use all functions provided by **wookong-solo-lib**, let's try to get device info by using [getDeviceInfo()](./4-Functions.md#getdeviceinfo), edit the `info` branch inside the `switch` statement in `index.js`:
    
     ```js
     case 'info':
