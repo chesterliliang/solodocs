@@ -1,6 +1,27 @@
 # Functions 
 
-Before calling any methods, Make sure **WOOKONG Solo** is well connected, PIN status is [<code>PIN_LOGIN</code>](./3core.constants.md#pin-status-definition) and LCD status is [<code>LCD_NULL</code> ](./3core.constants.md#lcd-status-definition) or [<code>LCD_SHOWLOGO</code>](./3core.constants.md#lcd-status-definition), otherwise errors may be encountered.
+Before calling any methods, Make sure **WOOKONG Solo** is well connected, PIN status is [<code>PIN_LOGIN</code>](./3-core.constants.md#pin-status-definition) and LCD status is [<code>LCD_NULL</code> ](./3-core.constants.md#lcd-status-definition) or [<code>LCD_SHOWLOGO</code>](./3-core.constants.md#lcd-status-definition), otherwise errors may be encountered.
+
+- [Functions](#functions)
+  - [getDeviceInfo()](#getdeviceinfo)
+  - [getDeviceCount()](#getdevicecount)
+  - [changePIN()](#changepin)
+  - [format()](#format)
+  - [getAddress(coinType, derivePath, showOnScreen)](#getaddresscointype-derivepath-showonscreen)
+  - [generateSeed(seedLen)](#generateseedseedlen)
+  - [importSeed()](#importseed)
+  - [getLibraryVersion()](#getlibraryversion)
+  - [signBTC(derivePath, currentTX, utxos)](#signbtcderivepath-currenttx-utxos)
+  - [signLTC(derivePath, currentTX, utxos)](#signltcderivepath-currenttx-utxos)
+  - [signNEO(derivePath, currentTX, utxos)](#signneoderivepath-currenttx-utxos)
+  - [signEthereum(derivePath, currentTX, isETH, erc20Info)](#signethereumderivepath-currenttx-iseth-erc20info)
+  - [signCYB(derivePath, currentTX)](#signcybderivepath-currenttx)
+  - [signEOS(derivePath, currentTX)](#signeosderivepath-currenttx)
+  - [signXRP(derivePath, currentTX)](#signxrpderivepath-currenttx)
+  - [getPubKey(derivePath, coinType)](#getpubkeyderivepath-cointype)
+  - [clearCOS()](#clearcos)
+  - [updateCOS(cosData, callback)](#updatecoscosdata-callback)
+  - [verifyFileSignature()](#verifyfilesignature)
 
 ## getDeviceInfo()
 
@@ -13,10 +34,10 @@ const { code, result: getDeviceInfoResult} = await core.getDeviceInfo();
 
 **Return format**
 
-<code>{ code, result: [getDeviceInfoResult](./5Function-result-objects.md#getDeviceInfoResult) }</code>
+<code>{ code, result: [getDeviceInfoResult](./5-Function-result-objects.md#getDeviceInfoResult) }</code>
 
 
-## getDeviceCount() ⇒ 
+## getDeviceCount()
 Get count of current connected devices.
 Device count is returned as the value of <code>result</code> key.
 
@@ -44,7 +65,7 @@ const { code } = await core.changePIN();
 ## format()
 Format current connected device.
 
-For user's convenience, this operation supports formatting **WOOKONG Solo** under [PIN_LOGOUT](./3core.constants.md#pin-status-definition) status, 
+For user's convenience, this operation supports formatting **WOOKONG Solo** under [PIN_LOGOUT](./3-core.constants.md#pin-status-definition) status, 
 
 Format is a dangerous operation, all user data will be erased, make sure mnemonics were backed up already.
 
@@ -65,7 +86,7 @@ Get coin address from connected device by coin type and derive path.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| coinType | <code>Integer</code> | Must be defined in [core.constants.coins](./3core.constants.md#coreconstantscoins)  |
+| coinType | <code>Integer</code> | Must be defined in [core.constants.coins](./3-core.constants.md#coreconstantscoins)  |
 | derivePath | <code>Array of Integer</code> | Following [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) is strongly recommended |
 | showOnScreen | <code>Integer</code> | 0: not shown on screen<br/>1: shown on screen<br/>other values will be rejected |
 
@@ -77,11 +98,11 @@ const { code, result: getAddressResult} = await core.getAddress(core.constants.C
 
 **Return format**
 
-<code>{ code, result: [getAddressResult](./5Function-result-objects.md#getAddressResult) }</code>
+<code>{ code, result: [getAddressResult](./5-Function-result-objects.md#getAddressResult) }</code>
 
 ## generateSeed(seedLen)
 
-Generate seed in connected device, the lifecycle of device must be [LIFECYCLE_AGREE](./3core.constants.md#lifecycle-definition).
+Generate seed in connected device, the lifecycle of device must be [LIFECYCLE_AGREE](./3-core.constants.md#lifecycle-definition).
 This operation require user to write down all mnemonics shown on device screen and input some of them to check.
 
 **Parameters**
@@ -101,7 +122,7 @@ const { code } = await core.generateSeed(32);
 
 ## importSeed()
 
-Import seed into connected device, the lifecycle of device must be [LIFECYCLE_AGREE](./3core.constants.md#lifecycle-definition).
+Import seed into connected device, the lifecycle of device must be [LIFECYCLE_AGREE](./3-core.constants.md#lifecycle-definition).
 This operation require user to select mnemonics count on device screen and then input all mnemonics in order.
 
 **Example**  
@@ -126,7 +147,7 @@ const { code, result } = await core.getLibraryVersion();
 
 **Return format**
 
-<code>{ code, result: [getLibraryVersionResult](./5Function-result-objects.md#getLibraryVersionResult) }</code>
+<code>{ code, result: [getLibraryVersionResult](./5-Function-result-objects.md#getLibraryVersionResult) }</code>
 
 ## signBTC(derivePath, currentTX, utxos)
 
@@ -155,7 +176,7 @@ const { code, result: signBTCResult} = await signBTC(derivePath, currentTX, utxo
 
 **Return format**
 
-<code>{ code, result: [signBTCResult](./5Function-result-objects.md#signBTCResult) }</code>
+<code>{ code, result: [signBTCResult](./5-Function-result-objects.md#signBTCResult) }</code>
 
 ## signLTC(derivePath, currentTX, utxos)
 
@@ -182,7 +203,7 @@ const { code, result: signBTCResult} = await signLTC(derivePath, currentTX, utxo
 
 **Return format**
 
-<code>{ code, result: [signLTCResult](./5Function-result-objects.md#signLTCResult) }</code>
+<code>{ code, result: [signLTCResult](./5-Function-result-objects.md#signLTCResult) }</code>
 
 ## signNEO(derivePath, currentTX, utxos)
 
@@ -209,7 +230,7 @@ const { code, result: signNEOResult} = await signNEO(derivePath, currentTX, utxo
 
 **Return format**
 
-<code>{ code, result: [signNEOResult](./5Function-result-objects.md#signNEOResult) }</code>
+<code>{ code, result: [signNEOResult](./5-Function-result-objects.md#signNEOResult) }</code>
 
 
 ## signEthereum(derivePath, currentTX, isETH, erc20Info)
@@ -239,7 +260,7 @@ const { code, result: signEthereumResult} = await signEthereum(derivePath, curre
 
 **Return format**
 
-<code>{ code, result: [signEthereumResult](./5Function-result-objects.md#signEthereumResult) }</code>
+<code>{ code, result: [signEthereumResult](./5-Function-result-objects.md#signEthereumResult) }</code>
 
 ## signCYB(derivePath, currentTX)
 
@@ -262,7 +283,7 @@ const { code, result: signCYBResult} = await signCYB(derivePath, currentTX);
 
 **Return format**
 
-<code>{ code, result: [signCYBResult](./5Function-result-objects.md#signCYBResult) }</code>
+<code>{ code, result: [signCYBResult](./5-Function-result-objects.md#signCYBResult) }</code>
 
 ## signEOS(derivePath, currentTX)
 
@@ -285,7 +306,7 @@ const { code, result: signEOSResult} = await signEOS(derivePath, currentTX);
 
 **Return format**
 
-<code>{ code, result: [signEOSResult](./5Function-result-objects.md#signEOSResult) }</code>
+<code>{ code, result: [signEOSResult](./5-Function-result-objects.md#signEOSResult) }</code>
 
 ## signXRP(derivePath, currentTX)
 
@@ -308,7 +329,7 @@ const { code, result: signXRPResult} = await signXRP(derivePath, currentTX);
 
 **Return format**
 
-<code>{ code, result: [signXRPResult](./5Function-result-objects.md#signXRPResult) }</code>
+<code>{ code, result: [signXRPResult](./5-Function-result-objects.md#signXRPResult) }</code>
 
 ## getPubKey(derivePath, coinType)
 
@@ -319,7 +340,7 @@ Get coin public key from conencted device.
 | Param | Type | Description |
 | --- | --- | --- |
 | derivePath | <code>Array of Integer</code> | Following [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) is strongly recommended |
-| coinType | <code>Integer</code> | Must be defined in [core.constants.coins](./3core.constants.md#coreconstantscoins)  |
+| coinType | <code>Integer</code> | Must be defined in [core.constants.coins](./3-core.constants.md#coreconstantscoins)  |
 
 **Example**  
 ```js
@@ -329,7 +350,7 @@ const { code, result: getPubKeyResult} = await getPubKey(derivePath, constants.c
 
 **Return format**
 
-<code>{ code, result: [getPubKeyResult](./5Function-result-objects.md#getPubKeyResult) }</code>
+<code>{ code, result: [getPubKeyResult](./5-Function-result-objects.md#getPubKeyResult) }</code>
 
 ## clearCOS()
 

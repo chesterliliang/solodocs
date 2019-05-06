@@ -3,17 +3,15 @@
 ## `send` command
 
 
-In tutorial 4, we will transfer ETH with **WOOKONG Solo**.
+In this section, we will transfer ETH with **WOOKONG Solo**.
 
 1. ETH transaction data is [RLP](https://github.com/ethereum/wiki/wiki/RLP) encoded, we do not need to add a dependency to [rlp package](https://github.com/ethereumjs/rlp) in our project explicitly as it is already in the dependency tree of [web3.js](https://github.com/ethereum/web3.js), just add the following code to the top of `index.js` is enough.
-   
-2. Add the following code to the top of `index.js`.
    
     ```js
     const { encode } = require('rlp');
     ```
 
-3. Add the following function at the end of `index.js`.
+2. Add the following function at the end of `index.js`.
     ```js
     async function processSend(command) {
         const ready = await isDeviceReady();
@@ -74,17 +72,17 @@ In tutorial 4, we will transfer ETH with **WOOKONG Solo**.
             console.log(`value: ${command[3]} Ether`);
             console.log(`gas price: ${gasPrice} Wei`);
             console.log(`gas limit: ${gasLimit}`);
-            console.log(`txid is: ${txid}`);
+            console.log(`you can see your transaction detail here: https://etherscan.io/tx/${txid}`);
         } catch (error) {
             console.log(`error: ${error.message}`,);
             return;
         }
     }
     ```
-4. Now connect your **WOOKONG Solo** to your system, make sure it is well connected and unlocked, run `node index.js`, then run `send -p[0, 2147483692, 2147483708, 2147483648, 0, 0] -p0x7F825230F5F2A26523999c98e0E3f7E2697085A9 -p0.00001` under `WST>` prompt, you should change the ETH address in the command to your own address, wait for a few seconds then you will see the transaction information is shown on device screen, use '▲' and '▼' buttons to see the details, press 'OK' to sign this transaction when you make sure all information shown on screen is exactly what you input just now, then you may see output as shown below:
+3. Now connect your **WOOKONG Solo** to your system, make sure it is well connected and unlocked, run `node index.js`, then run `send -p[0, 2147483692, 2147483708, 2147483648, 0, 0] -p0x7F825230F5F2A26523999c98e0E3f7E2697085A9 -p0.00001` under `WST>` prompt, you should change the ETH address in the command to your own address, wait for a few seconds then you will see the transaction information is shown on device screen, use '▲' and '▼' buttons to see the details, press 'OK' to sign this transaction when you make sure all information shown on screen is exactly what you input just now, then you may see output as shown below:
 
     ```shell
-    WST> send -p[0, 2147483692, 2147483708, 2147483648, 0, 0] -p0x7F825230F5F2A26523999c98e0E3f7E2697085A9 -p0.00001
+    WST> send [0,2147483692,2147483708,2147483648,0,0] 0x7F825230F5F2A26523999c98e0E3f7E2697085A9 0.00001
     transaction succeeded.
     from: 0x7A2e95248198B97C6E46829F3A977250121aa25d
     to: 0x7F825230F5F2A26523999c98e0E3f7E2697085A9

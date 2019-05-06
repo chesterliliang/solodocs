@@ -1,4 +1,4 @@
-## Let's start
+# Let's start
 
 This is a simple tutorial to show you the basic usage of **wookong-solo-lib**, although **WOOKONG Solo** is a financial level security hardware, we do not guarantee for any crypto currencies loss caused by improperly usage of **WOOKONG Solo** and **wookong-solo-lib**. Users should ensure the mnemonics are stored securely and check the transaction information shown on device screen carefully befor confirm it.
 
@@ -15,7 +15,7 @@ This is a simple tutorial to show you the basic usage of **wookong-solo-lib**, a
 2. `npm init`, then answer the questions to create package.json file, you may create it manually if you are familiar with it. You may also use the content below.
     ```json
     {
-        "name": "wookong-solo-tutorial",
+        "name": "wookong-solo-tutorial-node",
         "version": "1.0.0",
         "description": "A tutorial for showing how to use wookong-solo-lib",
         "main": "index.js",
@@ -44,16 +44,30 @@ This is a simple tutorial to show you the basic usage of **wookong-solo-lib**, a
     });
 
     console.log('Welcome to WOOKONG Solo Tutorial Wallet(WST)!');
-    console.log('USAGE:\ninfo\naddr derive_path\nbalance derive_path\nsend derive_path to value');
-    console.log('Example:\nsend -p[0, 2147483692, 2147483708, 2147483648, 0, 0] -p0x7F825230F5F2A26523999c98e0E3f7E2697085A9 -p0.00001');
+    console.log('USAGE:');
+    console.log('info');
+    console.log('init (generate|import)');
+    console.log('foramt');
+    console.log('addr <derive_path>');
+    console.log('balance <derive_path>');
+    console.log('nsend (<derive_path> <to> <value>)');
+    console.log('Example');
+    console.log('init import');
+    console.log('send [0,2147483692,2147483708,2147483648,0,0] 0x7F825230F5F2A26523999c98e0E3f7E2697085A9 0.00001');
     rl.prompt();
 
     rl.on('line', async (line) => {
-        const command = line.trim().split(' -p');
+        const command = line.trim().split(' ');
         try {
             switch (command[0]) {
                 case 'info':
                     console.log('info command is not implemented now');
+                    break;
+                case 'init':
+                    console.log('init command is not implemented now');
+                    break;
+                case 'format':
+                    console.log('format command is not implemented now');
                     break;
                 case 'addr':
                     console.log('addr command is not implemented now');

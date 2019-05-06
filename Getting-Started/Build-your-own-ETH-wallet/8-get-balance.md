@@ -3,7 +3,7 @@
 ## `balance` command
 
 
-In tutorial 3, we will get ETH balance of the ETH address we've got from **WOOKONG Solo**.
+In this section, we will get ETH balance of the ETH address we've got from **WOOKONG Solo**.
 
 1. To get ETH balance, we should import another package. Run `npm i web3` to install [web3.js](https://github.com/ethereum/web3.js).
    
@@ -44,6 +44,6 @@ In tutorial 3, we will get ETH balance of the ETH address we've got from **WOOKO
 4. Now connect your **WOOKONG Solo** to your system, make sure it is well connected and unlocked, run `node index.js`, then run `balance -p[0, 2147483692, 2147483708, 2147483648, 0, 0]` under `WST>` prompt, you may see output as shown below:
 
     ```shell
-    WST> balance -p[0, 2147483692, 2147483708, 2147483648, 0]
+    WST> balance [0,2147483692,2147483708,2147483648,0]
     your ETH address is: 0x7F825230F5F2A26523999c98e0E3f7E2697085A9, balance is: 0.00001 Ether
     ```

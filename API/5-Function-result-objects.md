@@ -1,18 +1,31 @@
 # Function result objects
 
+- [Function result objects](#function-result-objects)
+  - [getDeviceInfoResult](#getdeviceinforesult)
+  - [getDeviceCountResult](#getdevicecountresult)
+  - [getAddressResult](#getaddressresult)
+  - [signBTCResult](#signbtcresult)
+  - [signLTCResult](#signltcresult)
+  - [signNEOResult](#signneoresult)
+  - [signEthereumResult](#signethereumresult)
+  - [signCYBResult](#signcybresult)
+  - [signEOSResult](#signeosresult)
+  - [signXRPResult](#signxrpresult)
+  - [getPubKeyResult](#getpubkeyresult)
+
 ## getDeviceInfoResult
 
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| ucPINState | <code>Integer</code> | [PIN state](./3core.constants.md#pin-status-definition) |
-| ucCOSType | <code>Integer</code> | [Firmware type](./3core.constants.md#firmware-type-definition) |
-| ucChainType | <code>Integer</code> | [Chain type](./3core.constants.md#chain-type-definition) |
+| ucPINState | <code>Integer</code> | [PIN state](./3-core.constants.md#pin-status-definition) |
+| ucCOSType | <code>Integer</code> | [Firmware type](./3-core.constants.md#firmware-type-definition) |
+| ucChainType | <code>Integer</code> | [Chain type](./3-core.constants.md#chain-type-definition) |
 | pbSerialNumber | <code>String</code> | Device serial number |
 | pbCOSVersion | <code>Array</code> | Firmware version |
-| ucLifeCycle | <code>Integer</code> | [Lifecycle](./3core.constants.md#lifecycle-definition) |
-| nLcdState | <code>Integer</code> | [LCD State](./3core.constants.md#lcd-status-definition) |
+| ucLifeCycle | <code>Integer</code> | [Lifecycle](./3-core.constants.md#lifecycle-definition) |
+| nLcdState | <code>Integer</code> | [LCD State](./3-core.constants.md#lcd-status-definition) |
 | pbSessKeyHash | <code>Array</code> | Reserved |
 | nN | <code>Integer</code> | Reserved |
 | nT | <code>Integer</code> | Reserved |
@@ -42,13 +55,13 @@
 
 | Name | Type | Description |
 | --- | --- | --- |
-| ucPINState | <code>Integer</code> | [PIN state](./3core.constants.md#pin-status-definition) |
-| ucCOSType | <code>Integer</code> | [Firmware type](./3core.constants.md#firmware-type-definition) |
-| ucChainType | <code>Integer</code> | [Chain type](./3core.constants.md#chain-type-definition) |
+| ucPINState | <code>Integer</code> | [PIN state](./3-core.constants.md#pin-status-definition) |
+| ucCOSType | <code>Integer</code> | [Firmware type](./3-core.constants.md#firmware-type-definition) |
+| ucChainType | <code>Integer</code> | [Chain type](./3-core.constants.md#chain-type-definition) |
 | pbSerialNumber | <code>String</code> | Device serial number |
 | pbCOSVersion | <code>Array</code> | Firmware version |
-| ucLifeCycle | <code>Integer</code> | [Lifecycle](./3core.constants.md#lifecycle-definition) |
-| nLcdState | <code>Integer</code> | [LCD State](./3core.constants.md#lcd-status-definition) |
+| ucLifeCycle | <code>Integer</code> | [Lifecycle](./3-core.constants.md#lifecycle-definition) |
+| nLcdState | <code>Integer</code> | [LCD State](./3-core.constants.md#lcd-status-definition) |
 | pbSessKeyHash | <code>Array</code> | Reserved |
 | nN | <code>Integer</code> | Reserved |
 | nT | <code>Integer</code> | Reserved |
